@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GRID-X | Tic Tac Toe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="game-wrapper">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="logo">
+                GRID<span>X</span>
+            </div>
+
+            <div class="header-text">
+                TIC TAC TOE
+            </div>
+
+        </header>
+
+
+        <!-- GAME CARD -->
+
+        <section class="game-card">
+
+            <div class="game-top">
+
+                <div>
+                    <span class="eyebrow">ARCADE MODE</span>
+
+                    <h1>
+                        THREE
+                        <span>IN A ROW</span>
+                    </h1>
+                </div>
+
+                <div class="mode-switch">
+
+                    <button
+                        class="mode active"
+                        data-mode="computer"
+                    >
+                        🤖 VS CPU
+                    </button>
+
+                    <button
+                        class="mode"
+                        data-mode="friend"
+                    >
+                        👥 VS FRIEND
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCORE -->
+
+            <div class="scoreboard">
+
+                <div class="player-score x-score">
+
+                    <span class="player-symbol">X</span>
+
+                    <div>
+                        <small>PLAYER X</small>
+                        <strong id="scoreX">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="round-info">
+
+                    <span>ROUND</span>
+                    <strong id="roundNumber">01</strong>
+
+                </div>
+
+
+                <div class="player-score o-score">
+
+                    <span class="player-symbol">O</span>
+
+                    <div>
+                        <small id="playerOLabel">CPU</small>
+                        <strong id="scoreO">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="status" id="status">
+                PLAYER X'S TURN
+            </div>
+
+
+            <!-- BOARD -->
+
+            <div class="board" id="board">
+
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="controls">
+
+                <button
+                    class="control-btn secondary"
+                    id="resetScore"
+                >
+                    RESET SCORE
+                </button>
+
+                <button
+                    class="control-btn primary"
+                    id="newRound"
+                >
+                    NEW ROUND
+                </button>
+
+            </div>
+
+
+            <div class="instructions">
+
+                <span>✦</span>
+                GET THREE SYMBOLS IN A ROW TO WIN
+                <span>✦</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>GRID-X GAME SYSTEM</span>
+
+            <span>PLAY • THINK • WIN</span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- WINNER MODAL -->
+
+    <div class="modal" id="winnerModal">
+
+        <div class="modal-box">
+
+            <div class="trophy">🏆</div>
+
+            <span>ROUND COMPLETE</span>
+
+            <h2 id="winnerTitle">
+                PLAYER X WINS!
+            </h2>
+
+            <button id="modalButton">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
